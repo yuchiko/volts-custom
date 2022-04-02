@@ -15,9 +15,16 @@
 /* Mixins, helpers and functions */
 @import 'base/mixins';
 
-@import 'foundation'
+/* Atomic styles */
+@import 'base/atomic';
+
+/* Foundation framework */
+@import 'foundation';
 
 
 /* Components */
+@import 'blocks/about';
+
+@import 'general'
 
 

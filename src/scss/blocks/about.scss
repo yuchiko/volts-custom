@@ -1,0 +1,17 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: $clr-background;
+    color: $clr-text;
+    font-weight: $fw-medium;
+
+    &__text {
+        font-size: 20px;
+        strong, b {
+            color: $clr-text-light;
+            font-weight: bold;
+        }
+    }
+}
