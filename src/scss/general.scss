@@ -1,4 +1,39 @@
+@import "base/vars";
+
+// by default theme is dark
+:root {
+  --theme-primary-bg: #{$theme-dark-bg-primary};
+  --theme-primary-text: #{$theme-dark-text-primary};
+  --theme-primary-text-bold: #{$theme-dark-text-primary-bold};
+  --theme-accent-color: #ffd701;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
-    font-family: 'Gotham Pro', Arial, Helvetica, sans-serif;
-    font-weight: 400;
+  font-family: "Gotham Pro", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background: var(--theme-primary-bg);
+  color: var(--theme-primary-text);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.sc {
+  padding: 80px 0;
+
+  &__heading {
+    color: var(--theme-accent-color);
+    font-size: 3rem;
+    font-weight: $fw-bold;
+    text-align: center;
+    margin-bottom: 7rem;
+  }
+}
+
+b {
+  font-weight: $fw-bold;
+  color: var(--theme-primary-text-bold);
 }

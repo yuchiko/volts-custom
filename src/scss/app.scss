@@ -1,31 +1,29 @@
 /* By Athlon Front-End Team */
 
 /* Core variables */
-@import 'base/vars';
+@import "base/vars";
 
 /* CSS Reset */
-@import 'base/reset';
+@import "base/reset";
 
 /* CSS print */
-@import 'base/print';
+@import "base/print";
 
 /* Fonts */
-@import 'base/fonts';
+@import "base/fonts";
 
 /* Mixins, helpers and functions */
-@import 'base/mixins';
+@import "base/mixins";
 
 /* Atomic styles */
-@import 'base/atomic';
+@import "base/atomic";
 
 /* Foundation framework */
-@import 'foundation';
-
+@import "foundation";
 
 /* Components */
-@import 'blocks/about';
-@import 'blocks/partners.scss';
+@import "blocks/about";
+@import "blocks/partners";
+@import "blocks/advantages";
 
-@import 'general'
-
-
+@import "general";
