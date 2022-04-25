@@ -21,11 +21,11 @@
 /* Foundation framework */
 @import "foundation";
 
+@import "general";
+
 /* Components */
 @import "blocks/about";
 @import "blocks/partners";
 @import "blocks/advantages";
 @import "blocks/services";
 @import "blocks/person";
-
-@import "general";
