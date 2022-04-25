@@ -2,13 +2,36 @@
  * Helper mixins
 */
 
+@function __unfoldTransition($transition) {
+  // Default values
+  $property: all;
+  $time_duration: $duration;
+  $animation_type: $easing; // Browser default is ease, which is what we want
+  $delay: null; // Browser default is 0, which is what we want
+  $defaultProperties: ($property, $time_duration, $animation_type, $delay);
+
+  // Grab transition properties if they exist
+  $unfoldedTransition: ();
+  @for $i from 1 through length($defaultProperties) {
+    $p: null;
+    @if $i <= length($transition) {
+      $p: nth($transition, $i);
+    } @else {
+      $p: nth($defaultProperties, $i);
+    }
+    $unfoldedTransition: append($unfoldedTransition, $p);
+  }
+
+  @return $unfoldedTransition;
+}
+
 // Clearfix
 // http://www.cssmojo.com/latest_new_clearfix_so_far/
 // Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
 @mixin clearfix {
   &::after {
     clear: both;
-    content: '';
+    content: "";
     display: table;
   }
 }
@@ -16,15 +39,20 @@
 // Media queries
 @mixin bp($point) {
   @if $point == large {
-    @media (min-width: 1280px) { @content; }
+    @media (min-width: 1280px) {
+      @content;
+    }
   } @else if $point == small {
-    @media (max-width: 1279px) { @content; }
+    @media (max-width: 1279px) {
+      @content;
+    }
   }
 }
 
 // Text selection
 @mixin text-selection($color-selection, $color-selection-bg) {
-  ::-moz-selection { // sass-lint:disable-line no-vendor-prefixes
+  ::-moz-selection {
+    // sass-lint:disable-line no-vendor-prefixes
     background: $color-selection-bg;
     color: $color-selection;
     text-shadow: none;
@@ -42,8 +70,54 @@
 //@include placeholder;
 @mixin placeholder {
   // sass-lint:disable no-vendor-prefixes
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+
+// Usage:   @include transition(width, height 0.3s ease-in-out);
+// Output:  -webkit-transition(width 0.2s, height 0.3s ease-in-out);
+//          transition(width 0.2s, height 0.3s ease-in-out);
+//
+// Pass in any number of transitions
+@mixin transition($transitions...) {
+  $unfoldedTransitions: ();
+  @each $transition in $transitions {
+    $unfoldedTransitions: append(
+      $unfoldedTransitions,
+      __unfoldTransition($transition),
+      comma
+    );
+  }
+
+  -webkit-transition: $unfoldedTransitions;
+  transition: $unfoldedTransitions;
+}
+
+%unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin visually-hidden {
+	position: absolute !important;
+
+	clip: rect(0 0 0 0) !important;
+
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
 }

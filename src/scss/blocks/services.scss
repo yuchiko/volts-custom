@@ -1,3 +1,81 @@
 .services {
-  //
+  &-item {
+    position: relative;
+    padding: 6.5rem 5rem 5.5rem;
+    border-radius: 15px;
+    @include transition(all);
+    overflow: hidden;
+    &:hover {
+      // background: var(--theme-primary-bg-lighten);
+
+      .in, .out {
+        opacity: 1;
+        transform: translate(0);
+      }
+
+      .services-item__text {
+        color: var(--theme-primary-text-accent);
+      }
+
+      .lightning {
+        transform: translateY(1000px);
+      }
+    }
+
+    &__header {
+      margin-bottom: 3rem;
+    }
+
+    &__heading {
+      font-size: 3rem;
+      font-weight: $fw-bold;
+      color: var(--theme-primary-text-accent);
+    }
+
+    &__text {
+      @include transition(color);
+    }
+
+    &__footer {
+      margin-top: 4rem;
+    }
+
+    .in, .out {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--theme-primary-bg-lighten);
+      z-index: -1;
+      @include transition(opacity, transform);
+      opacity: 0;
+      border-radius: 15px;
+      transition-duration: .5s;
+    }
+
+    .in {
+      transform: translate(-100%, -100%);
+    }
+
+    .out {
+      transform: translate(100%, 100%);
+    }
+
+    .lightning {
+      position: absolute;
+      top: 0;
+      left: 2.5rem;
+      z-index: -1;
+      width: .3rem;
+      height: 8rem;
+      background: var(--theme-accent-color);
+      // TODO: ask Vasya for gradient
+      background: linear-gradient(0deg, rgba(239,255,0,1) 0%, rgba(228,245,40,0.5) 35%, rgba(255,255,255,0.6) 100%);
+      @include transition(opacity, transform);
+      transition-duration: .3s;
+      transform: translate(-100%, -100%);
+    }
+
+  }
 }

@@ -3,8 +3,9 @@
 // by default theme is dark
 :root {
   --theme-primary-bg: #{$theme-dark-bg-primary};
+  --theme-primary-bg-lighten: #{$theme-dark-bg-primary-lighten};
   --theme-primary-text: #{$theme-dark-text-primary};
-  --theme-primary-text-bold: #{$theme-dark-text-primary-bold};
+  --theme-primary-text-accent: #{$theme-dark-text-primary-bold};
   --theme-accent-color: #ffd701;
 }
 
@@ -13,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Gotham Pro", Arial, Helvetica, sans-serif;
+  font-family: $base-font;
   font-weight: 400;
   background: var(--theme-primary-bg);
   color: var(--theme-primary-text);
@@ -35,5 +36,5 @@ body {
 
 b {
   font-weight: $fw-bold;
-  color: var(--theme-primary-text-bold);
+  color: var(--theme-primary-text-accent);
 }
