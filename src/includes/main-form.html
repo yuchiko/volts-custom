@@ -4,7 +4,30 @@
       <header class="main-form__header">
         <div class="d-flex flex-center">
           <h2 class="sc__heading main-form__heading">Підключитись до</h2>
-          <span>[icon]</span>
+          <!-- TODO: add svg inline loader -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="118"
+            height="64.769"
+            viewBox="0 0 118 64.769"
+          >
+            <g id="logo_shadow" transform="translate(-784 -3601.615)">
+              <path
+                id="Path_149"
+                data-name="Path 149"
+                d="M52.6,27.142A36.994,36.994,0,0,0,47.359,28.6l-12.6,18.941a12.141,12.141,0,0,0,4.721,8.636c3.214,2.451,7.4,3.334,12.432,2.623a22.832,22.832,0,0,0,8.624-3.021,19.942,19.942,0,0,0,6.4-6.069,17.536,17.536,0,0,0,3.051-9.765c0-4.529-1.63-8.013-4.841-10.356S57.722,26.417,52.6,27.142Zm6.333,20.965a11.122,11.122,0,0,1-6.9,3.564,8.233,8.233,0,0,1-6.539-1.444,6.9,6.9,0,0,1-2.6-5.8,9.227,9.227,0,0,1,2.795-6.669,11.832,11.832,0,0,1,7.064-3.506c2.815-.4,4.968,0,6.573,1.225a6.562,6.562,0,0,1,2.4,5.6,9.867,9.867,0,0,1-2.8,7.028ZM86.092,22.281,77.424,23.52,71.085,55.7l17.708-2.531,1.68-7.4-9.228,1.2Zm7.052-1.007L91.418,28.89,99.392,27.7l-5.63,24.854,8.706-1.277,5.506-24.792,3.558-.5,5.468-8.2Zm-70.8,16.032L18.657,19.195,0,46.163l12-7.28,5.138,24.886L59.714,0Z"
+                transform="translate(785 3602.615)"
+                fill="#303030"
+              />
+              <path
+                id="Path_150"
+                data-name="Path 150"
+                d="M52.6,27.142A36.994,36.994,0,0,0,47.359,28.6l-12.6,18.941a12.141,12.141,0,0,0,4.721,8.636c3.214,2.451,7.4,3.334,12.432,2.623a22.832,22.832,0,0,0,8.624-3.021,19.942,19.942,0,0,0,6.4-6.069,17.536,17.536,0,0,0,3.051-9.765c0-4.529-1.63-8.013-4.841-10.356S57.722,26.417,52.6,27.142Zm6.333,20.965a11.122,11.122,0,0,1-6.9,3.564,8.233,8.233,0,0,1-6.539-1.444,6.9,6.9,0,0,1-2.6-5.8,9.227,9.227,0,0,1,2.795-6.669,11.832,11.832,0,0,1,7.064-3.506c2.815-.4,4.968,0,6.573,1.225a6.562,6.562,0,0,1,2.4,5.6,9.867,9.867,0,0,1-2.8,7.028ZM86.092,22.281,77.424,23.52,71.085,55.7l17.708-2.531,1.68-7.4-9.228,1.2Zm7.052-1.007L91.418,28.89,99.392,27.7l-5.63,24.854,8.706-1.277,5.506-24.792,3.558-.5,5.468-8.2Zm-70.8,16.032L18.657,19.195,0,46.163l12-7.28,5.138,24.886L59.714,0Z"
+                transform="translate(784 3601.615)"
+                fill="#ffd701"
+              />
+            </g>
+          </svg>
         </div>
         <p class="main-form__subheader">
           Якщо ваша компанія розглядає можливість отримувати постачання
@@ -12,24 +35,161 @@
           комерційної пропозіції
         </p>
       </header>
-      <table class="main-form__table">
-        <tr>
-          <td>1. Назва юридичної особи / код €ДРПОУ</td>
-          <td>
-            <input class="volt-input" type="text" placeholder="Ваша назва" />
-          </td>
-        </tr>
-        <tr>
-          <td>2. Клас Споживання</td>
-          <td>
-            <input
-              class="volt-input"
-              type="text"
-              placeholder="1 клас / 11 клас"
-            />
-          </td>
-        </tr>
-      </table>
+      <form>
+        <table class="main-form__table">
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_company_name"
+                >1. Назва юридичної особи / код €ДРПОУ</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_company_name"
+                name="company_name"
+                class="volt-input"
+                type="text"
+                placeholder="Ваша назва"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_consumption_class"
+                >2. Клас Споживання</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_consumption_class"
+                name="consumption_class"
+                class="volt-input"
+                type="text"
+                placeholder="1 клас / 11 клас"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="volt-form-label" for="ff_consumption_class"
+                >3. Група Споживання:</span
+              >
+            </td>
+            <td>
+              <div class="volt-form-radio">
+                <input
+                  type="radio"
+                  id="consumption_group_a"
+                  name="radio-group"
+                />
+                <label for="consumption_group_a">Група А</label>
+              </div>
+              <div class="volt-form-radio">
+                <input
+                  type="radio"
+                  id="consumption_group_b"
+                  name="radio-group"
+                />
+                <label for="consumption_group_b">Група Б</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_address"
+                >4. Мiсце пiдключення</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_address"
+                name="connection_address"
+                class="volt-input"
+                type="text"
+                placeholder="Область, регiон, населений пункт, адреса"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="who_is_provider"
+                >5. Хто є Постачальником електроенергiї</label
+              >
+            </td>
+            <td>
+              <input
+                id="who_is_provider"
+                name="who_is_provider"
+                class="volt-input"
+                type="text"
+                placeholder="Назва постачальника"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="who_is_distributor"
+                >6. Хто е Розподiльником електроенергії</label
+              >
+            </td>
+            <td>
+              <input
+                id="who_is_distributor"
+                name="who_is_distributor"
+                class="volt-input"
+                type="text"
+                placeholder="Назва розподiльника"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="price_for_3_month"
+                >7. Вартiсть 1 кВт/год за останнi 3 (три) мiсяцi, на момент
+                подання iнформації</label
+              >
+            </td>
+            <td>
+              <input
+                id="price_for_3_month"
+                name="price_for_3_month"
+                class="volt-input"
+                type="text"
+                placeholder="Вартість в гривні"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="schedulle_payment"
+                >8. Графiк оплати за використану е/е:</label
+              >
+            </td>
+            <td>
+              <div class="grid-x grid-margin-x">
+                <div class="cell medium-6">
+                  <input
+                    id="schedulle_payment"
+                    name="schedulle_payment"
+                    class="volt-input"
+                    type="text"
+                    placeholder="Дiючий графiк"
+                  />
+                </div>
+                <div class="cell medium-6">
+                  <input
+                    id="schedulle_payment_new"
+                    name="schedulle_payment_new"
+                    class="volt-input"
+                    type="text"
+                    placeholder="Бажаний графiк"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
     </div>
   </div>
 </section>
