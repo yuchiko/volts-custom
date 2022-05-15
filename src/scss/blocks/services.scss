@@ -24,10 +24,17 @@
       .lightning {
         transform: translateY(1000px);
       }
+
+      .services-item__icon {
+        fill: var(--theme-accent-color);;
+      }
+
     }
 
     &__header {
       margin-bottom: 3rem;
+      display: flex;
+      align-items: flex-end;
     }
 
     &__heading {
@@ -38,6 +45,14 @@
 
     &__text {
       @include transition(color);
+    }
+
+    &__icon {
+      width: auto;
+      height: 8rem;
+      margin-right: 3rem;
+      @include transition(fill);
+      fill: $clr-text;
     }
 
     &__footer {
