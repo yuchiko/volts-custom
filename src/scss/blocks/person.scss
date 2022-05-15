@@ -8,10 +8,6 @@
     }
   }
 
-  &__icon {
-    margin-right: 3rem;
-  }
-
   &__list {
     margin-left: 0;
 
@@ -23,6 +19,16 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      &:before {
+        display: inline-block;
+        content: '';
+        flex: 0 0 4rem;
+        width: 4rem;
+        height: 4rem;
+        background-image: url('../images/icons/checkmark.svg');
+        margin-right: 3rem;
       }
 
       span {
