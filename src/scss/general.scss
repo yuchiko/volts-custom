@@ -42,12 +42,3 @@ b {
   font-weight: $fw-bold;
   color: var(--theme-primary-text-accent);
 }
-
-// TODO: move to form.scss
-
-.volt-input {
-  font-size: 1.4rem;
-  border-radius: 5rem;
-  border: 2px solid #303030;
-  padding: 20px;
-}

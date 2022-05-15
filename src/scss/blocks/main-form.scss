@@ -18,8 +18,14 @@
   }
   &__table {
     width: 100%;
+
+    input {
+      margin: 0;
+    }
+
     td {
       width: 50%;
+      padding-bottom: 1.6rem;
     }
   }
 }
