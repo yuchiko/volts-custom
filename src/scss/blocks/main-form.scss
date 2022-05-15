@@ -1,0 +1,24 @@
+.main-form {
+  color: #303030;
+
+  &__box {
+    background: #FFFFFF;
+    padding: 4rem 8rem;
+    border-radius: 15px;
+  }
+  &__heading {
+    margin-bottom: 0;
+  }
+  &__subheader {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    font-weight: $fw-medium;
+  }
+  &__table {
+    width: 100%;
+    td {
+      width: 50%;
+    }
+  }
+}
