@@ -28,4 +28,28 @@
       padding-bottom: 1.6rem;
     }
   }
+
+  &__footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &__submit {
+    margin: 1.4rem auto 4rem;
+  }
+
+  &__small-text {
+    font-size: 1.2rem;
+    color: var(--theme-primary-text);
+
+    a {
+      color: var(--theme-primary-text)!important;
+      @include transition(color);
+      text-decoration: underline;
+
+      &:hover{
+        color: var(--theme-accent-color)!important;
+      }
+    }
+  }
 }
