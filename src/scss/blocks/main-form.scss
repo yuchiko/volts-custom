@@ -1,10 +1,54 @@
 .main-form {
   color: #303030;
 
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :first-child {
+      border-radius: 1.5rem 0px 0px 0px;
+    }
+
+    :last-child {
+      border-radius: 0px 1.5rem 0px 0px;
+    }
+  }
+
+  &__tabs-item {
+    background: #151516;
+    padding: 3.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30rem;
+    cursor: pointer;
+
+    &.is-active {
+      background: $white;
+
+      span {
+        color: #303030;
+      }
+    }
+
+    span {
+      font-size: 1.8rem;
+      font-weight: $fw-bold;
+      padding: 0 4rem 0 1rem;
+      color: $white;
+    }
+
+    svg {
+      height: 3.5rem;
+      fill: var(--theme-accent-color);
+    }
+  }
+
   &__box {
     background: #FFFFFF;
     padding: 4rem 8rem;
-    border-radius: 15px;
+    border-radius: 1.5rem;
   }
   &__heading {
     margin-bottom: 0;

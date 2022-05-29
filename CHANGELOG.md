@@ -480,7 +480,6 @@
 ### Updates
 
 * `src/scss/app.scss` - grouped all demo page styles in a dedicated file called `demo.scss` for easer removal upon starting a new project.
-* Added example demo code in `src/js/demo.js`
 * Updated `README.md`
 
 ### Removed Dependencies
