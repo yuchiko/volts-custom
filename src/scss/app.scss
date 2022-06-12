@@ -25,10 +25,16 @@
 @import "forms";
 @import "buttons";
 
-/* Components */
+/* components */
+@import "components/burger-menu.scss";
+@import "components/lang-dropdown.scss";
+
+/* block components */
+@import "blocks/header";
 @import "blocks/about";
 @import "blocks/partners";
 @import "blocks/advantages";
 @import "blocks/services";
 @import "blocks/person";
 @import "blocks/main-form";
+

@@ -1,0 +1,25 @@
+.header {
+
+  &__wrapper {
+    padding: 3rem 2rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__burger-m, &__lang-dropdown {
+    display: inline-block;
+    background: #151516;
+    line-height: 0;
+    border-radius: 50%;
+    transition: .3s background;
+    cursor: pointer;
+
+    &:hover {
+      background: #252526;
+    }
+  }
+
+  &__lang-dropdown {
+    margin-left: auto;
+  }
+}

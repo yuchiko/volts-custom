@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 (function () {
   initMainFormTabSwitcher();
+  initBurgerMenu();
 
   function initMainFormTabSwitcher() {
     $('.js-form-tab-item').on('click', function () {
@@ -14,6 +15,12 @@ import $ from 'jquery';
         $(item).addClass('hide');
       });
       $('#' + formTargetId).removeClass('hide');
+    });
+  }
+
+  function initBurgerMenu() {
+    $('.js-burger-menu').on('click', function () {
+      $(this).toggleClass('is-active');
     });
   }
 }());
