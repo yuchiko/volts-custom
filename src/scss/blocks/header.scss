@@ -22,4 +22,56 @@
   &__lang-dropdown {
     margin-left: auto;
   }
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    align-items: center;
+    width: 100%;
+
+    &-list {
+      margin-left: auto;
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-left: 2rem;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.menu {
+  ul {
+    margin-left: 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  // &__item:hover {
+  //   .menu__link-text {
+  //     color: var(--theme-accent-color);
+  //   }
+  // }
+
+  &__link-text {
+    font-size: 1.4rem;
+    font-weight: $fw-medium;
+    color: $white;
+    margin: 0 1.6rem;
+    @include transition(all);
+
+    &:hover {
+      color: var(--theme-accent-color);
+    }
+  }
 }
