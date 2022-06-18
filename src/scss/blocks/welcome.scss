@@ -46,7 +46,66 @@
   }
 
   &__footer {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 5rem 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__down-link {
+    position: relative;
+  }
+
+  &__contacts {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: $white;
+      font-size: 1.4rem;
+      font-weight: $fw-bold;
+      margin-right: 3rem;
+      @include transition(all);
+
+      &:hover {
+        color: var(--theme-accent-color);
+      }
+    }
+
+    a:last-child {
+      margin: 0;
+    }
+
+    .circle-link {
+      box-shadow: 0 0 0 0 rgba(48, 48, 48, 1);
+      animation: pulse-white 2s infinite;
+
+      &:hover {
+        animation-duration: 99s;
+        animation-play-state: paused;
+      }
+    }
+
+    @keyframes pulse-white {
+      0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(48, 48, 48, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 1rem rgba(48, 48, 48, 0);
+      }
+
+      100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(48, 48, 48, 0);
+      }
+    }
   }
 }
 
@@ -54,6 +113,50 @@
   & > .grid-container,
   & > .grid-container > .grid-x {
     height: 100%;
+  }
+}
+
+// DOWN ARROW ANIMATION
+.down-arrow,
+.down-arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.down-arrow {
+  width: 2rem;
+  height: 2rem;
+  top: 50%;
+  margin: -1rem 0 0 -1rem;
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  transform: rotate(45deg);
+}
+
+.down-arrow:before {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  top: 50%;
+  margin: -.8rem 0 0 -.8rem;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
   }
 }
 
