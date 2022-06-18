@@ -1,8 +1,8 @@
 .lang-dropdown {
   position: relative;
   display: inline-block;
-  width: 6rem;
-  height: 6rem;
+  width: $language-dropdown-size;
+  height: $language-dropdown-size;
 
   &:hover &__flag {
     transform: translate(-80%, -60%) scale(0.5) rotate(-15deg);

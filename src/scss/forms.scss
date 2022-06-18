@@ -12,7 +12,7 @@ $clr-border-color: #303030;
   font-size: 1.4rem;
   border-radius: 5rem;
   border: 2px solid $clr-border-color;
-  padding: 20px;
+  padding: 2rem;
 
   &:focus {
     border: 2px solid var(--theme-accent-color);
@@ -106,8 +106,8 @@ $clr-border-color: #303030;
   // height: calc(var(--checkbox-size) * 0.75);
   // border-right: calc(var(--checkbox-size) * 0.25) solid var(--tick-color);
   // border-bottom: calc(var(--checkbox-size) * 0.25) solid var(--tick-color);
-  width: 12px;
-  height: 30px;
+  width: 1.2rem;
+  height: 3rem;
   border-right: 5px solid var(--tick-color);
   border-bottom: 5px solid var(--tick-color);
   transform: rotate(45deg) scale(0);
