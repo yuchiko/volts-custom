@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Volts</title>
+    <meta name="description" content="Volts website" />
+    <meta name="keywords" content="volts, energy, website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Yuriy Byts. MDVS agency" />
+    <link rel="icon" href="/images/favicons/favicon.ico" sizes="any" />
+    <!-- 32×32 -->
+    <!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
+    <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.ico"><script defer src="js/app.js"></script><link href="css/app.css" rel="stylesheet"></head>
+  <body class="dark-theme">
+    <header class="header">
+  <div class="header__wrapper">
+    <div class="burger-m header__burger-m js-burger-menu">
+      <svg
+        class="ham hamRotate ham4"
+        viewBox="0 0 100 100"
+        width="80"
+      >
+        <path
+          class="line top"
+          d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+        />
+        <path class="line middle" d="m 70,50 h -40" />
+        <path
+          class="line bottom"
+          d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+        />
+      </svg>
+    </div>
+    <div class="header__menu menu">
+      <div class="header__menu-list">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <span class="menu__link-text">Про компанію</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <span class="menu__link-text">Підключення</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <span class="menu__link-text">Інфо-центр</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__logo">
+        <a class="menu__link" href="#">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTgiIGhlaWdodD0iNjQuNzY5IiB2aWV3Qm94PSIwIDAgMTE4IDY0Ljc2OSI+CiAgPGcgaWQ9ImxvZ29fc2hhZG93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzg0IC0zNjAxLjYxNSkiPgogICAgPHBhdGggaWQ9IlBhdGhfMTQ5IiBkYXRhLW5hbWU9IlBhdGggMTQ5IiBkPSJNNTIuNiwyNy4xNDJBMzYuOTk0LDM2Ljk5NCwwLDAsMCw0Ny4zNTksMjguNmwtMTIuNiwxOC45NDFhMTIuMTQxLDEyLjE0MSwwLDAsMCw0LjcyMSw4LjYzNmMzLjIxNCwyLjQ1MSw3LjQsMy4zMzQsMTIuNDMyLDIuNjIzYTIyLjgzMiwyMi44MzIsMCwwLDAsOC42MjQtMy4wMjEsMTkuOTQyLDE5Ljk0MiwwLDAsMCw2LjQtNi4wNjksMTcuNTM2LDE3LjUzNiwwLDAsMCwzLjA1MS05Ljc2NWMwLTQuNTI5LTEuNjMtOC4wMTMtNC44NDEtMTAuMzU2UzU3LjcyMiwyNi40MTcsNTIuNiwyNy4xNDJabTYuMzMzLDIwLjk2NWExMS4xMjIsMTEuMTIyLDAsMCwxLTYuOSwzLjU2NCw4LjIzMyw4LjIzMywwLDAsMS02LjUzOS0xLjQ0NCw2LjksNi45LDAsMCwxLTIuNi01LjgsOS4yMjcsOS4yMjcsMCwwLDEsMi43OTUtNi42NjksMTEuODMyLDExLjgzMiwwLDAsMSw3LjA2NC0zLjUwNmMyLjgxNS0uNCw0Ljk2OCwwLDYuNTczLDEuMjI1YTYuNTYyLDYuNTYyLDAsMCwxLDIuNCw1LjYsOS44NjcsOS44NjcsMCwwLDEtMi44LDcuMDI4Wk04Ni4wOTIsMjIuMjgxLDc3LjQyNCwyMy41Miw3MS4wODUsNTUuN2wxNy43MDgtMi41MzEsMS42OC03LjQtOS4yMjgsMS4yWm03LjA1Mi0xLjAwN0w5MS40MTgsMjguODksOTkuMzkyLDI3LjdsLTUuNjMsMjQuODU0LDguNzA2LTEuMjc3LDUuNTA2LTI0Ljc5MiwzLjU1OC0uNSw1LjQ2OC04LjJabS03MC44LDE2LjAzMkwxOC42NTcsMTkuMTk1LDAsNDYuMTYzbDEyLTcuMjgsNS4xMzgsMjQuODg2TDU5LjcxNCwwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzg1IDM2MDIuNjE1KSIgZmlsbD0iIzMwMzAzMCIvPgogICAgPHBhdGggaWQ9IlBhdGhfMTUwIiBkYXRhLW5hbWU9IlBhdGggMTUwIiBkPSJNNTIuNiwyNy4xNDJBMzYuOTk0LDM2Ljk5NCwwLDAsMCw0Ny4zNTksMjguNmwtMTIuNiwxOC45NDFhMTIuMTQxLDEyLjE0MSwwLDAsMCw0LjcyMSw4LjYzNmMzLjIxNCwyLjQ1MSw3LjQsMy4zMzQsMTIuNDMyLDIuNjIzYTIyLjgzMiwyMi44MzIsMCwwLDAsOC42MjQtMy4wMjEsMTkuOTQyLDE5Ljk0MiwwLDAsMCw2LjQtNi4wNjksMTcuNTM2LDE3LjUzNiwwLDAsMCwzLjA1MS05Ljc2NWMwLTQuNTI5LTEuNjMtOC4wMTMtNC44NDEtMTAuMzU2UzU3LjcyMiwyNi40MTcsNTIuNiwyNy4xNDJabTYuMzMzLDIwLjk2NWExMS4xMjIsMTEuMTIyLDAsMCwxLTYuOSwzLjU2NCw4LjIzMyw4LjIzMywwLDAsMS02LjUzOS0xLjQ0NCw2LjksNi45LDAsMCwxLTIuNi01LjgsOS4yMjcsOS4yMjcsMCwwLDEsMi43OTUtNi42NjksMTEuODMyLDExLjgzMiwwLDAsMSw3LjA2NC0zLjUwNmMyLjgxNS0uNCw0Ljk2OCwwLDYuNTczLDEuMjI1YTYuNTYyLDYuNTYyLDAsMCwxLDIuNCw1LjYsOS44NjcsOS44NjcsMCwwLDEtMi44LDcuMDI4Wk04Ni4wOTIsMjIuMjgxLDc3LjQyNCwyMy41Miw3MS4wODUsNTUuN2wxNy43MDgtMi41MzEsMS42OC03LjQtOS4yMjgsMS4yWm03LjA1Mi0xLjAwN0w5MS40MTgsMjguODksOTkuMzkyLDI3LjdsLTUuNjMsMjQuODU0LDguNzA2LTEuMjc3LDUuNTA2LTI0Ljc5MiwzLjU1OC0uNSw1LjQ2OC04LjJabS03MC44LDE2LjAzMkwxOC42NTcsMTkuMTk1LDAsNDYuMTYzbDEyLTcuMjgsNS4xMzgsMjQuODg2TDU5LjcxNCwwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzg0IDM2MDEuNjE1KSIgZmlsbD0iI2ZmZDcwMSIvPgogIDwvZz4KPC9zdmc+Cg==" alt="">
+        </a>
+      </div>
+      <div class="header__menu-list">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <span class="menu__link-text">Контакти</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              <span class="menu__link-text">Підключитись</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lang-dropdown header__lang-dropdown">
+      <div class="lang-dropdown__current lang-dropdown__ua">
+        <span class="lang-dropdown__short">укр</span>
+        <img
+          class="lang-dropdown__flag"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0RDcyQzA7fQoJLnN0MXtmaWxsOiNGMkREMzA7fQo8L3N0eWxlPjxnPjxyZWN0IGNsYXNzPSJzdDAiIGhlaWdodD0iMjk4LjciIHdpZHRoPSI1MTIiIHg9IjAiIHk9IjEwNi43Ii8+PHJlY3QgY2xhc3M9InN0MSIgaGVpZ2h0PSIxNDkuNCIgd2lkdGg9IjUxMiIgeD0iMCIgeT0iMjU2Ii8+PC9nPjwvc3ZnPg=="
+          alt="ua flag"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+ <div class="welcome grid-100">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="welcome__wrapper">
+        <div></div>
+        <div class="welcome__center">
+          <p class="welcome__lead">
+            Вигідна ціна за <span>газ</span> в будь-яку точку Центральної Європи
+          </p>
+          <p class="welcome__text">
+            Підключимо до діючих газових мереж газорозподільного підприємства
+            об’єктів газоспоживання потужністю до 16 куб.м/рік.
+          </p>
+          <div class="welcome__buttons">
+            <button class="welcome__btn button-animation-fill is-active" type="button">
+              <div class="button__bg">
+              </div>
+              <div class="button__content">
+                <svg
+                  class="button__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="42.395"
+                  height="77.071"
+                  viewBox="0 0 42.395 77.071"
+                >
+                  <path
+                    id="new_5"
+                    d="M35.46,63.595a3.849,3.849,0,0,1-3.847,3.847H14.272a3.847,3.847,0,0,1,0-7.694H31.613A3.849,3.849,0,0,1,35.46,63.595ZM27.752,69.38H20.043a3.847,3.847,0,0,0,0,7.694h7.709a3.847,3.847,0,1,0,0-7.694ZM8.487,53.963a3.852,3.852,0,0,0,3.861,3.847H35.475a3.847,3.847,0,1,0,0-7.694H12.349A3.852,3.852,0,0,0,8.487,53.963ZM39.849,19.538,5.167,33.031a3.855,3.855,0,0,0-1.61,6l7.709,9.632a3.848,3.848,0,1,0,6.013-4.8l-4.431-5.543,29.794-11.6a3.853,3.853,0,0,0-2.793-7.181ZM6.564,26.99a3.967,3.967,0,0,0,1.4-.256L42.642,13.225a3.853,3.853,0,0,0-2.793-7.181L5.167,19.538a3.858,3.858,0,0,0,1.4,7.452Zm0-13.494a3.728,3.728,0,0,0,1.51-.313L21.568,7.4A3.852,3.852,0,1,0,18.533.316L5.039,6.1a3.854,3.854,0,0,0,1.525,7.4Z"
+                    transform="translate(-2.703 -0.003)"
+                  />
+                </svg>
+                <span>Електроенергія</span>
+              </div>
+            </button>
+            <button class="welcome__btn button-animation-fill" type="button">
+              <div class="button__bg"></div>
+              <div class="button__content">
+                <svg
+                  class="button__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="51.753"
+                  height="65.642"
+                  viewBox="0 0 51.753 65.642"
+                >
+                  <path
+                    id="new_6"
+                    d="M46.911,71.539A2.99,2.99,0,0,1,45.2,72.1a2.907,2.907,0,0,1-2.4-1.241,2.951,2.951,0,0,1,.686-4.113,17.306,17.306,0,0,0,6.773-14.775,15.19,15.19,0,0,0-3.522-9.444c-.91,2.778-2.813,5.248-6.123,5.91a.8.8,0,0,1-.165.024c-3.688.532-6.879-.449-8.735-2.683a7.877,7.877,0,0,1-1.135-7.754,22.749,22.749,0,0,1,1.537-3.534c2.376-4.728,5.224-10.4-1.962-17.564a16.13,16.13,0,0,1-1.513,6.82c-1.879,4.125-5.272,7.541-8.546,10.839C16.51,38.184,12.81,41.907,11.1,46.5a18.505,18.505,0,0,0-.366,9.243c1.028,4.468,3.865,7.825,8.428,9.976a2.951,2.951,0,1,1-2.506,5.343C3.012,64.648,3.413,50.961,5.529,44.614c.012-.024.024-.059.035-.083,2.139-5.815,6.5-10.212,10.354-14.089,6.962-7.009,10.709-11.394,6.714-19.763A2.951,2.951,0,0,1,26.888,6.92c8.345,5.366,12.789,11,13.6,17.257C41.2,29.567,39,33.94,37.4,37.143a18.28,18.28,0,0,0-1.158,2.577c-.012.035-.024.083-.035.118A2.483,2.483,0,0,0,36.249,42c.39.473,1.454.875,3.274.638,1.962-.473,1.986-4.432,1.986-4.468a8.2,8.2,0,0,1,.047-1.04,3.205,3.205,0,0,1,5.414-2.057c5.555,3.451,8.889,9.515,9.184,16.666A23.243,23.243,0,0,1,46.911,71.539Z"
+                    transform="translate(-4.421 -6.453)"
+                  /></svg
+                ><span>Газ</span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="welcome__footer">
+          <ul class="socials welcome__socials">
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                Telegram
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                Linkedin
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                Facebook
+              </a>
+            </li>
+          </ul>
+          <div class="welcome__down-link">
+            <a href="#below" class="down-arrow"></a>
+          </div>
+          <div class="welcome__contacts">
+            <a href="tel:+123123123">+380 (44) 123 33 44</a>
+            <a href="telegram:23424" class="circle-link">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMi41OTkiIGhlaWdodD0iMjEuNjU2IiB2aWV3Qm94PSIwIDAgMjIuNTk5IDIxLjY1NiI+CiAgPGcgaWQ9InBhcGVyLXBsYW5lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzY4LjAxIC0zNDgpIj4KICAgIDxwYXRoIGlkPSJQYXRoXzEyOCIgZGF0YS1uYW1lPSJQYXRoIDEyOCIgZD0iTTc4OS43MjYsMzQ4aC4zNTNhLjk2My45NjMsMCwwLDEsLjUzLjUzdi40Yy0uMDU5LjMzOC0uMTI0LjY3NC0uMTc1LDEuMDE0cS0uNDM0LDIuOS0uODYzLDUuOHQtLjg1OSw1Ljc3OWMtLjIzMiwxLjU2My0uNDY0LDMuMTI2LS43LDQuNjg4YS44LjgsMCwwLDEtLjE2NS4zNzUuNzMzLjczMywwLDAsMS0uODg0LjE3MnEtNC43ODItMS42MzktOS41NjYtMy4yNzNjLS4wNTEtLjAxOC0uMS0uMDQyLS4xNjktLjA3MWw5LjQ3LTExLjQxYS4yMzcuMjM3LDAsMCwwLS4xNjkuMDY2cS01Ljk4Nyw1LjExOS0xMS45NzEsMTAuMjQyYS4zNDkuMzQ5LDAsMCwxLS4zOTIuMDczcS0yLjcxNy0uOTM3LTUuNDQtMS44NmExLjA2OSwxLjA2OSwwLDAsMS0uNzExLS41NjF2LS4zNTNhLjk4MS45ODEsMCwwLDEsLjQ3OC0uNTE4cTUuNzczLTMuMDA3LDExLjU0LTYuMDIyUTc4NC44NzgsMzUwLjUzNiw3ODkuNzI2LDM0OFoiIGZpbGw9IiNmZmQ3MDEiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzEyOSIgZGF0YS1uYW1lPSJQYXRoIDEyOSIgZD0iTTkxMS45LDYzMS4ybC0xLjM3MSwxLjg2NmMtLjM4Ny41MjctLjc2OSwxLjA1Ny0xLjE2MiwxLjU3OGEuNy43LDAsMCwxLTEuMjE2LS4wNjkuNzU4Ljc1OCwwLDAsMS0uMDcyLS4zMTdjMC0xLjQxLDAtMi44MjEsMC00LjIzMWExLjE1LDEuMTUsMCwwLDEsLjAxNi0uMTI5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEzMS44MjUgLTI2NS4zMDkpIiBmaWxsPSIjZmZkNzAxIi8+CiAgPC9nPgo8L3N2Zz4K" alt="telegram icon">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="sc about">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="large-8 cell large-offset-2">
+        <p class="about__text ta-center">
+          <strong>ТОВ «ВОЛЬТ ПОСТАЧ»</strong> — повноправний учасник
+          енергетичної, газової та вугільної галузі.
+          <strong>Компанія виступає надійним постачальником</strong>
+          енергоресурсів «під ключ» на оптовому ринку.
+          <b>Серед наших партнерів</b> —підприємства України, які будують бізнес
+          у легкій та важкій промисловості, аграрному та харчовому секторі, а
+          також міжнародні холдінги.
+          <strong>Мы клієнтоорієнтована компанія</strong>, сфокусована на
+          наданні якісних послуг за клієнтоорієнтованими цінами.
+        </p>
+        <div class="about__actions">
+          <!-- https://github.com/codrops/MagneticButtons/ -->
+          <!-- <button class="button button-magnetic-new">
+            <span class="button__text">
+              <span class="button__text-inner">Про нас</span>
+            </span>
+          </button> -->
+          <button class="button-magnetic-icon" type="button">
+            <div class="button__content">
+              <span class="button__text">Про нас</span>
+              <div class="button__icon">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ljc1OSIgaGVpZ2h0PSIxMS40NjIiIHZpZXdCb3g9IjAgMCA3Ljc1OSAxMS40NjIiPgogIDxnIGlkPSJhcnJvd19yaWdodCIgZGF0YS1uYW1lPSJhcnJvdyByaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1LjE1MiAxMTY1LjU1MSkgcm90YXRlKC05MCkiPgogICAgPGxpbmUgaWQ9IkxpbmVfMSIgZGF0YS1uYW1lPSJMaW5lIDEiIHgyPSI0LjMyIiB5Mj0iNC45MzciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNTUuNSA1Ni41NjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ3MDEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSBpZD0iTGluZV8yIiBkYXRhLW5hbWU9IkxpbmUgMiIgeDE9IjQuMzIiIHkyPSI0LjkzNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE1OS44MiA1Ni41NjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ3MDEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgo8L3N2Zz4K" alt="">
+              </div>
+            </div>
+          </button>
+          <button
+            class="volt-button theme-2"
+            type="button"
+          >
+            Зв’язатися з нами
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <section class="sc advantages">
+  <div class="grid-container">
+    <div class="large-12 cell">
+      <h2 class="sc__heading">Наші переваги</h2>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-4">
+        <div class="advantages-item">
+          <div class="advantages-item__image">
+            <video width="300" height="200" autoplay="autoplay" loop muted>
+              <source src="c769ed663e1e862a8179.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="advantages-item__text">
+            <b>Стабільність і надійність.</b> Ми націлені на довгострокове та
+            взаємовигідне співробітництво, тому гарантуємо своєчасне постачання
+            електроенергії, вугілля та газу.
+          </div>
+        </div>
+      </div>
+      <div class="cell large-4">
+        <div class="advantages-item">
+          <div class="advantages-item__image">
+            <video width="300" height="200" autoplay="autoplay" loop muted>
+              <source src="16fb7250f2283bc3775d.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="advantages-item__text">
+            Допомогти підприємствам<br>
+            <b>оптимізувати витрати й підвищити енергоефективність</b> шляхом
+            отримання послуг високого рівня.
+          </div>
+        </div>
+      </div>
+      <div class="cell large-4">
+        <div class="advantages-item">
+          <video width="300" height="200" autoplay="autoplay" loop muted>
+            <source src="8441e9acc20627957c03.mp4" type="video/mp4" />
+          </video>
+          <div class="advantages-item__text">
+            Запропонувати вигідну кінцеву вартість енергоресурсів та
+            <b>забезпечити індивідуальний сервіс</b> для бізнесу.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <div class="partners">
+    <img class="partners__image" src="images/design/partners-demo.79a480.jpg" alt="GitHub logo">
+</div> <section class="services sc">
+  <div class="grid-container">
+    <div class="large-12 cell">
+      <h2 class="sc__heading services__heading">Послуги</h2>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-6">
+        <div class="services-item">
+          <div class="in"></div>
+          <div class="out"></div>
+          <!-- <div class="lightning"></div> -->
+          <div class="services-item__header">
+            <!-- TODO: add svg inline loader -->
+            <svg
+              class="services-item__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="42.395"
+              height="77.071"
+              viewBox="0 0 42.395 77.071"
+            >
+              <path
+                id="new_5"
+                d="M35.46,63.595a3.849,3.849,0,0,1-3.847,3.847H14.272a3.847,3.847,0,0,1,0-7.694H31.613A3.849,3.849,0,0,1,35.46,63.595ZM27.752,69.38H20.043a3.847,3.847,0,0,0,0,7.694h7.709a3.847,3.847,0,1,0,0-7.694ZM8.487,53.963a3.852,3.852,0,0,0,3.861,3.847H35.475a3.847,3.847,0,1,0,0-7.694H12.349A3.852,3.852,0,0,0,8.487,53.963ZM39.849,19.538,5.167,33.031a3.855,3.855,0,0,0-1.61,6l7.709,9.632a3.848,3.848,0,1,0,6.013-4.8l-4.431-5.543,29.794-11.6a3.853,3.853,0,0,0-2.793-7.181ZM6.564,26.99a3.967,3.967,0,0,0,1.4-.256L42.642,13.225a3.853,3.853,0,0,0-2.793-7.181L5.167,19.538a3.858,3.858,0,0,0,1.4,7.452Zm0-13.494a3.728,3.728,0,0,0,1.51-.313L21.568,7.4A3.852,3.852,0,1,0,18.533.316L5.039,6.1a3.854,3.854,0,0,0,1.525,7.4Z"
+                transform="translate(-2.703 -0.003)"
+              />
+            </svg>
+            <h3 class="services-item__heading">Електроенергія</h3>
+          </div>
+          <p class="services-item__text">
+            Вам необхідно приєднати до електромереж новий будинок або нежитлове
+            приміщення? Визначте тип приєднання та пройдіть необхідну процедуру.
+          </p>
+          <div class="services-item__footer">
+            <button class="volt-button theme-2" type="button">
+              Підключитись
+            </button>
+            <button class="button-magnetic-icon" type="button">
+              <div class="button__content">
+                <span class="button__text">Онлайн консультація</span>
+                <div class="button__icon">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ljc1OSIgaGVpZ2h0PSIxMS40NjIiIHZpZXdCb3g9IjAgMCA3Ljc1OSAxMS40NjIiPgogIDxnIGlkPSJhcnJvd19yaWdodCIgZGF0YS1uYW1lPSJhcnJvdyByaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1LjE1MiAxMTY1LjU1MSkgcm90YXRlKC05MCkiPgogICAgPGxpbmUgaWQ9IkxpbmVfMSIgZGF0YS1uYW1lPSJMaW5lIDEiIHgyPSI0LjMyIiB5Mj0iNC45MzciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNTUuNSA1Ni41NjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ3MDEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSBpZD0iTGluZV8yIiBkYXRhLW5hbWU9IkxpbmUgMiIgeDE9IjQuMzIiIHkyPSI0LjkzNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE1OS44MiA1Ni41NjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ3MDEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cell large-6">
+        <div class="services-item">
+          <div class="in"></div>
+          <div class="out"></div>
+          <!-- <div class="lightning"></div> -->
+          <div class="services-item__header">
+            <!-- TODO: add svg inline loader -->
+            <svg
+              class="services-item__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="51.753"
+              height="65.642"
+              viewBox="0 0 51.753 65.642"
+            >
+              <path
+                id="new_6"
+                d="M46.911,71.539A2.99,2.99,0,0,1,45.2,72.1a2.907,2.907,0,0,1-2.4-1.241,2.951,2.951,0,0,1,.686-4.113,17.306,17.306,0,0,0,6.773-14.775,15.19,15.19,0,0,0-3.522-9.444c-.91,2.778-2.813,5.248-6.123,5.91a.8.8,0,0,1-.165.024c-3.688.532-6.879-.449-8.735-2.683a7.877,7.877,0,0,1-1.135-7.754,22.749,22.749,0,0,1,1.537-3.534c2.376-4.728,5.224-10.4-1.962-17.564a16.13,16.13,0,0,1-1.513,6.82c-1.879,4.125-5.272,7.541-8.546,10.839C16.51,38.184,12.81,41.907,11.1,46.5a18.505,18.505,0,0,0-.366,9.243c1.028,4.468,3.865,7.825,8.428,9.976a2.951,2.951,0,1,1-2.506,5.343C3.012,64.648,3.413,50.961,5.529,44.614c.012-.024.024-.059.035-.083,2.139-5.815,6.5-10.212,10.354-14.089,6.962-7.009,10.709-11.394,6.714-19.763A2.951,2.951,0,0,1,26.888,6.92c8.345,5.366,12.789,11,13.6,17.257C41.2,29.567,39,33.94,37.4,37.143a18.28,18.28,0,0,0-1.158,2.577c-.012.035-.024.083-.035.118A2.483,2.483,0,0,0,36.249,42c.39.473,1.454.875,3.274.638,1.962-.473,1.986-4.432,1.986-4.468a8.2,8.2,0,0,1,.047-1.04,3.205,3.205,0,0,1,5.414-2.057c5.555,3.451,8.889,9.515,9.184,16.666A23.243,23.243,0,0,1,46.911,71.539Z"
+                transform="translate(-4.421 -6.453)"
+              />
+            </svg>
+            <h3 class="services-item__heading">Газ</h3>
+          </div>
+          <p class="services-item__text">
+            Стандартне приєднання - приєднання до діючих газових мереж
+            газорозподільного підприємства об’єктів газоспоживання потужністю до
+            16 куб.м/рік. Включно на відстань, що не перевищує 25 м для
+            сільської і 10 м для міської місцевості по прямій лінії від місця
+            забезпечення потужності … до місця приєднання.
+          </p>
+          <div class="services-item__footer">
+            <button class="volt-button theme-2" type="button">
+              Підключитись
+            </button>
+            <button class="button-magnetic-icon" type="button">
+              <div class="button__content">
+                <span class="button__text">Онлайн консультація</span>
+                <div class="button__icon">
+                  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ljc1OSIgaGVpZ2h0PSIxMS40NjIiIHZpZXdCb3g9IjAgMCA3Ljc1OSAxMS40NjIiPgogIDxnIGlkPSJhcnJvd19yaWdodCIgZGF0YS1uYW1lPSJhcnJvdyByaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU1LjE1MiAxMTY1LjU1MSkgcm90YXRlKC05MCkiPgogICAgPGxpbmUgaWQ9IkxpbmVfMSIgZGF0YS1uYW1lPSJMaW5lIDEiIHgyPSI0LjMyIiB5Mj0iNC45MzciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExNTUuNSA1Ni41NjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ3MDEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSBpZD0iTGluZV8yIiBkYXRhLW5hbWU9IkxpbmUgMiIgeDE9IjQuMzIiIHkyPSI0LjkzNyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTE1OS44MiA1Ni41NjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmQ3MDEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" />
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="sc person sc-pb-0">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="large-8 cell">
+        <h2 class="sc__heading person__heading">
+          Організаційні питання та документацію <span>беремо на себе!</span>
+        </h2>
+        <ul class="person__list">
+          <li>
+            <div><span>Консультації</span> з питань, пов’язаних зі зміною
+            постачальника електроенергії або природного газу.</div>
+          </li>
+          <li>
+            <div><span>Допомога з документацією</span> — постійно відстежуємо зміни в
+            законодавстві та беремо на себе весь документообіг, що дає змогу
+            нашим партнерам працювати в межах чинного закону.</div>
+          </li>
+          <li>
+            <div><span>Допомога з організаційними питаннями,</span> пов’язаними з Держнаглядом і
+            Національною комісією, яка здійснює державне регулювання у галузі
+            енергетики та комунальних послуг.</div>
+          </li>
+        </ul>
+      </div>
+      <div class="large-4">
+        <img src="images/design/partner-image-me.4295a5.png" alt="person">
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="sc main-form sc--invert sc-pt-0">
+  <div class="grid-container">
+    <div class="main-form__tabs">
+      <div
+        class="main-form__tabs-item is-active js-form-tab-item"
+        data-main-form="electricity-form"
+      >
+        <svg
+          class="services-item__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="42.395"
+          height="77.071"
+          viewBox="0 0 42.395 77.071"
+        >
+          <path
+            id="new_5"
+            d="M35.46,63.595a3.849,3.849,0,0,1-3.847,3.847H14.272a3.847,3.847,0,0,1,0-7.694H31.613A3.849,3.849,0,0,1,35.46,63.595ZM27.752,69.38H20.043a3.847,3.847,0,0,0,0,7.694h7.709a3.847,3.847,0,1,0,0-7.694ZM8.487,53.963a3.852,3.852,0,0,0,3.861,3.847H35.475a3.847,3.847,0,1,0,0-7.694H12.349A3.852,3.852,0,0,0,8.487,53.963ZM39.849,19.538,5.167,33.031a3.855,3.855,0,0,0-1.61,6l7.709,9.632a3.848,3.848,0,1,0,6.013-4.8l-4.431-5.543,29.794-11.6a3.853,3.853,0,0,0-2.793-7.181ZM6.564,26.99a3.967,3.967,0,0,0,1.4-.256L42.642,13.225a3.853,3.853,0,0,0-2.793-7.181L5.167,19.538a3.858,3.858,0,0,0,1.4,7.452Zm0-13.494a3.728,3.728,0,0,0,1.51-.313L21.568,7.4A3.852,3.852,0,1,0,18.533.316L5.039,6.1a3.854,3.854,0,0,0,1.525,7.4Z"
+            transform="translate(-2.703 -0.003)"
+          />
+        </svg>
+        <span>Електроенергiя</span>
+      </div>
+      <div class="main-form__tabs-item js-form-tab-item" data-main-form="gas-form">
+        <svg
+          class="services-item__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="51.753"
+          height="65.642"
+          viewBox="0 0 51.753 65.642"
+        >
+          <path
+            id="new_6"
+            d="M46.911,71.539A2.99,2.99,0,0,1,45.2,72.1a2.907,2.907,0,0,1-2.4-1.241,2.951,2.951,0,0,1,.686-4.113,17.306,17.306,0,0,0,6.773-14.775,15.19,15.19,0,0,0-3.522-9.444c-.91,2.778-2.813,5.248-6.123,5.91a.8.8,0,0,1-.165.024c-3.688.532-6.879-.449-8.735-2.683a7.877,7.877,0,0,1-1.135-7.754,22.749,22.749,0,0,1,1.537-3.534c2.376-4.728,5.224-10.4-1.962-17.564a16.13,16.13,0,0,1-1.513,6.82c-1.879,4.125-5.272,7.541-8.546,10.839C16.51,38.184,12.81,41.907,11.1,46.5a18.505,18.505,0,0,0-.366,9.243c1.028,4.468,3.865,7.825,8.428,9.976a2.951,2.951,0,1,1-2.506,5.343C3.012,64.648,3.413,50.961,5.529,44.614c.012-.024.024-.059.035-.083,2.139-5.815,6.5-10.212,10.354-14.089,6.962-7.009,10.709-11.394,6.714-19.763A2.951,2.951,0,0,1,26.888,6.92c8.345,5.366,12.789,11,13.6,17.257C41.2,29.567,39,33.94,37.4,37.143a18.28,18.28,0,0,0-1.158,2.577c-.012.035-.024.083-.035.118A2.483,2.483,0,0,0,36.249,42c.39.473,1.454.875,3.274.638,1.962-.473,1.986-4.432,1.986-4.468a8.2,8.2,0,0,1,.047-1.04,3.205,3.205,0,0,1,5.414-2.057c5.555,3.451,8.889,9.515,9.184,16.666A23.243,23.243,0,0,1,46.911,71.539Z"
+            transform="translate(-4.421 -6.453)"
+          />
+        </svg>
+        <span>Газ</span>
+      </div>
+    </div>
+    <div class="main-form__box">
+      <header class="main-form__header">
+        <div class="d-flex flex-center">
+          <h2 class="sc__heading main-form__heading">Підключитись до</h2>
+          <!-- TODO: add svg inline loader -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="118"
+            height="64.769"
+            viewBox="0 0 118 64.769"
+          >
+            <g id="logo_shadow" transform="translate(-784 -3601.615)">
+              <path
+                id="Path_149"
+                data-name="Path 149"
+                d="M52.6,27.142A36.994,36.994,0,0,0,47.359,28.6l-12.6,18.941a12.141,12.141,0,0,0,4.721,8.636c3.214,2.451,7.4,3.334,12.432,2.623a22.832,22.832,0,0,0,8.624-3.021,19.942,19.942,0,0,0,6.4-6.069,17.536,17.536,0,0,0,3.051-9.765c0-4.529-1.63-8.013-4.841-10.356S57.722,26.417,52.6,27.142Zm6.333,20.965a11.122,11.122,0,0,1-6.9,3.564,8.233,8.233,0,0,1-6.539-1.444,6.9,6.9,0,0,1-2.6-5.8,9.227,9.227,0,0,1,2.795-6.669,11.832,11.832,0,0,1,7.064-3.506c2.815-.4,4.968,0,6.573,1.225a6.562,6.562,0,0,1,2.4,5.6,9.867,9.867,0,0,1-2.8,7.028ZM86.092,22.281,77.424,23.52,71.085,55.7l17.708-2.531,1.68-7.4-9.228,1.2Zm7.052-1.007L91.418,28.89,99.392,27.7l-5.63,24.854,8.706-1.277,5.506-24.792,3.558-.5,5.468-8.2Zm-70.8,16.032L18.657,19.195,0,46.163l12-7.28,5.138,24.886L59.714,0Z"
+                transform="translate(785 3602.615)"
+                fill="#303030"
+              />
+              <path
+                id="Path_150"
+                data-name="Path 150"
+                d="M52.6,27.142A36.994,36.994,0,0,0,47.359,28.6l-12.6,18.941a12.141,12.141,0,0,0,4.721,8.636c3.214,2.451,7.4,3.334,12.432,2.623a22.832,22.832,0,0,0,8.624-3.021,19.942,19.942,0,0,0,6.4-6.069,17.536,17.536,0,0,0,3.051-9.765c0-4.529-1.63-8.013-4.841-10.356S57.722,26.417,52.6,27.142Zm6.333,20.965a11.122,11.122,0,0,1-6.9,3.564,8.233,8.233,0,0,1-6.539-1.444,6.9,6.9,0,0,1-2.6-5.8,9.227,9.227,0,0,1,2.795-6.669,11.832,11.832,0,0,1,7.064-3.506c2.815-.4,4.968,0,6.573,1.225a6.562,6.562,0,0,1,2.4,5.6,9.867,9.867,0,0,1-2.8,7.028ZM86.092,22.281,77.424,23.52,71.085,55.7l17.708-2.531,1.68-7.4-9.228,1.2Zm7.052-1.007L91.418,28.89,99.392,27.7l-5.63,24.854,8.706-1.277,5.506-24.792,3.558-.5,5.468-8.2Zm-70.8,16.032L18.657,19.195,0,46.163l12-7.28,5.138,24.886L59.714,0Z"
+                transform="translate(784 3601.615)"
+                fill="#ffd701"
+              />
+            </g>
+          </svg>
+        </div>
+        <p class="main-form__subheader">
+          Якщо ваша компанія розглядає можливість отримувати постачання
+          електроенергії, газу або вугілля, заповніть форму для розробки
+          комерційної пропозіції
+        </p>
+      </header>
+      <form id="electricity-form" class="js-main-form-variant">
+        <table class="main-form__table">
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_company_name"
+                >1. Назва юридичної особи / код €ДРПОУ</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_company_name"
+                name="company_name"
+                class="volt-input"
+                type="text"
+                placeholder="Ваша назва"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_consumption_class"
+                >2. Клас Споживання</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_consumption_class"
+                name="consumption_class"
+                class="volt-input"
+                type="text"
+                placeholder="1 клас / 11 клас"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="volt-form-label" for="ff_consumption_class"
+                >3. Група Споживання:</span
+              >
+            </td>
+            <td>
+              <div class="d-flex">
+                <div class="volt-form-radio">
+                  <input
+                    type="radio"
+                    id="consumption_group_a"
+                    name="radio-group"
+                  />
+                  <label for="consumption_group_a">Група А</label>
+                </div>
+                <div class="volt-form-radio">
+                  <input
+                    type="radio"
+                    id="consumption_group_b"
+                    name="radio-group"
+                  />
+                  <label for="consumption_group_b">Група Б</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_address"
+                >4. Мiсце пiдключення</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_address"
+                name="connection_address"
+                class="volt-input"
+                type="text"
+                placeholder="Область, регiон, населений пункт, адреса"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="who_is_provider"
+                >5. Хто є Постачальником електроенергiї</label
+              >
+            </td>
+            <td>
+              <input
+                id="who_is_provider"
+                name="who_is_provider"
+                class="volt-input"
+                type="text"
+                placeholder="Назва постачальника"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="who_is_distributor"
+                >6. Хто е Розподiльником електроенергії</label
+              >
+            </td>
+            <td>
+              <input
+                id="who_is_distributor"
+                name="who_is_distributor"
+                class="volt-input"
+                type="text"
+                placeholder="Назва розподiльника"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="price_for_3_month"
+                >7. Вартiсть 1 кВт/год за останнi 3 (три) мiсяцi, на момент
+                подання iнформації</label
+              >
+            </td>
+            <td>
+              <input
+                id="price_for_3_month"
+                name="price_for_3_month"
+                class="volt-input"
+                type="text"
+                placeholder="Вартість в гривні"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="schedulle_payment"
+                >8. Графiк оплати за використану е/е:</label
+              >
+            </td>
+            <td>
+              <div class="grid-x grid-margin-x">
+                <div class="cell medium-6">
+                  <input
+                    id="schedulle_payment"
+                    name="schedulle_payment"
+                    class="volt-input"
+                    type="text"
+                    placeholder="Дiючий графiк"
+                  />
+                </div>
+                <div class="cell medium-6">
+                  <input
+                    id="schedulle_payment_new"
+                    name="schedulle_payment_new"
+                    class="volt-input"
+                    type="text"
+                    placeholder="Бажаний графiк"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="main-form__footer">
+          <div class="d-flex flex-center">
+            <div class="volt-form-checkbox">
+              <input type="checkbox" id="check_personal_data" />
+              <label for="check_personal_data"><div class="tick"></div></label>
+            </div>
+            <label for="check_personal_data" class="volt-form-label c-pointer"
+              >Погоджуюсь на обробку персональних даних</label
+            >
+          </div>
+          <button
+            class="main-form__submit volt-button volt-button--large"
+            type="submit"
+          >
+            Розрахувати комерційну пропозицію
+          </button>
+          <p class="main-form__small-text">
+            За додатковою інформацією звертайтесь до
+            <a href="#">відділу продажів</a> або в <a href="#">FAQ</a>
+          </p>
+        </div>
+      </form>
+      <form id="gas-form" class="hide js-main-form-variant">
+        <table class="main-form__table">
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_company_name"
+                > ГАЗ ГАЗ ГАЗ 1. Назва юридичної особи / код €ДРПОУ</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_company_name"
+                name="company_name"
+                class="volt-input"
+                type="text"
+                placeholder="Ваша назва"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_consumption_class"
+                >2. Клас Споживання</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_consumption_class"
+                name="consumption_class"
+                class="volt-input"
+                type="text"
+                placeholder="1 клас / 11 клас"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="volt-form-label" for="ff_consumption_class"
+                >3. Група Споживання:</span
+              >
+            </td>
+            <td>
+              <div class="d-flex">
+                <div class="volt-form-radio">
+                  <input
+                    type="radio"
+                    id="consumption_group_a"
+                    name="radio-group"
+                  />
+                  <label for="consumption_group_a">Група А</label>
+                </div>
+                <div class="volt-form-radio">
+                  <input
+                    type="radio"
+                    id="consumption_group_b"
+                    name="radio-group"
+                  />
+                  <label for="consumption_group_b">Група Б</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="ff_address"
+                >4. Мiсце пiдключення</label
+              >
+            </td>
+            <td>
+              <input
+                id="ff_address"
+                name="connection_address"
+                class="volt-input"
+                type="text"
+                placeholder="Область, регiон, населений пункт, адреса"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="who_is_provider"
+                >5. Хто є Постачальником електроенергiї</label
+              >
+            </td>
+            <td>
+              <input
+                id="who_is_provider"
+                name="who_is_provider"
+                class="volt-input"
+                type="text"
+                placeholder="Назва постачальника"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="who_is_distributor"
+                >6. Хто е Розподiльником електроенергії</label
+              >
+            </td>
+            <td>
+              <input
+                id="who_is_distributor"
+                name="who_is_distributor"
+                class="volt-input"
+                type="text"
+                placeholder="Назва розподiльника"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="price_for_3_month"
+                >7. Вартiсть 1 кВт/год за останнi 3 (три) мiсяцi, на момент
+                подання iнформації</label
+              >
+            </td>
+            <td>
+              <input
+                id="price_for_3_month"
+                name="price_for_3_month"
+                class="volt-input"
+                type="text"
+                placeholder="Вартість в гривні"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="volt-form-label" for="schedulle_payment"
+                >8. Графiк оплати за використану е/е:</label
+              >
+            </td>
+            <td>
+              <div class="grid-x grid-margin-x">
+                <div class="cell medium-6">
+                  <input
+                    id="schedulle_payment"
+                    name="schedulle_payment"
+                    class="volt-input"
+                    type="text"
+                    placeholder="Дiючий графiк"
+                  />
+                </div>
+                <div class="cell medium-6">
+                  <input
+                    id="schedulle_payment_new"
+                    name="schedulle_payment_new"
+                    class="volt-input"
+                    type="text"
+                    placeholder="Бажаний графiк"
+                  />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="main-form__footer">
+          <div class="d-flex flex-center">
+            <div class="volt-form-checkbox">
+              <input type="checkbox" id="check_personal_data" />
+              <label for="check_personal_data"><div class="tick"></div></label>
+            </div>
+            <label for="check_personal_data" class="volt-form-label c-pointer"
+              >Погоджуюсь на обробку персональних даних</label
+            >
+          </div>
+          <button
+            class="main-form__submit volt-button volt-button--large"
+            type="submit"
+          >
+            Розрахувати комерційну пропозицію
+          </button>
+          <p class="main-form__small-text">
+            За додатковою інформацією звертайтесь до
+            <a href="#">відділу продажів</a> або в <a href="#">FAQ</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+ <section class="sc news sc--invert-bg sc--invert">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12">
+        <header class="sc__header news__header">
+          <h2 class="sc__heading news__heading">Інфо-центр</h2>
+          <button class="button-magnetic-icon" type="button">
+            <div class="button__content">
+              <span class="button__text">До інфо-центру</span>
+              <div class="button__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="7.759"
+                  height="11.462"
+                  viewBox="0 0 7.759 11.462"
+                  stroke="#ffd701"
+                >
+                  <g
+                    id="arrow_right"
+                    data-name="arrow right"
+                    transform="translate(-55.152 1165.551) rotate(-90)"
+                  >
+                    <line
+                      id="Line_1"
+                      data-name="Line 1"
+                      x2="4.32"
+                      y2="4.937"
+                      transform="translate(1155.5 56.563)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    />
+                    <line
+                      id="Line_2"
+                      data-name="Line 2"
+                      x1="4.32"
+                      y2="4.937"
+                      transform="translate(1159.82 56.563)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </button>
+        </header>
+      </div>
+      <div class="cell medium-6 large-4">
+        <div class="news-item">
+          <div class="news-item__info">
+            <span class="news-item__tag">#новини</span>
+            <span class="news-item__last-edit">39 хвилин тому</span>
+          </div>
+          <h3 class="news-item__heading">
+            В Києві викрито підпільну криптоферму, яка встигла вкрасти об‘єм
+            електричної енергії на 3.500.000 грн.
+          </h3>
+          <div class="news-item__content">
+            <p>
+              Організатори схеми орендували ангар і підключалися до
+              електростанції в обхід лічильника. Правоохоронцями було вилучено
+              спеціальне обладнання загальною вартістю понад 6.000.000 грн.
+              Впевнені, що це не перша і не остання криптоферма в Україні, що
+              точно можна сказати-винахідливі:)
+            </p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-item__info">
+            <span class="news-item__tag">#новини</span>
+            <span class="news-item__last-edit">1 година тому</span>
+          </div>
+          <h3 class="news-item__heading">
+            За даними News in 24news.in-24.com постачальник газу в Німеччині
+            gas.de припинив роботу 2 грудня 2021 року.
+          </h3>
+          <div class="news-item__content">
+            <img src="images/design/news-example.97c0d1.jpeg" alt="news-example" />
+          </div>
+        </div>
+      </div>
+      <div class="cell medium-6 large-8">
+        <div class="tabs js-tabs">
+          <div class="tabs__triggers js-tab-trigger">
+            <div class="tabs__trigger-item">#Енергодоба</div>
+            <div class="tabs__trigger-item">#газодоба</div>
+          </div>
+          <div class="tabs__content">
+            <div class="tabs__item js-tab-item">
+              <h3>14.12.2021 ОЕС</h3>
+              <p>
+                <b>Ціна базового навантаження без ПДВ:</b> 3171,18грн/МВт*год.<br>
+                <b>Ціна пік без ПДВ:</b> 3998,42грн/МВт*год.<br>
+                <b>Ціна поза пік без ПДВ:</b> 2343,94грн/МВт*год.<br>
+                <b>Обсяг закупки:</b> 138 108,7МВт*год.<br>
+                <b>Обсяг продажу:</b> 152 349,8МВт*год.<br>
+                <b>Профіцитні години:</b> з 01-08, 16, 19-24;<br>
+                <b>Дефіцитні години:</b> 09-15, 17-18.<br>
+              </p>
+              <br>
+              <p>Тенденція ціни РДН підвищилася.</p>
+              <h4>Пояснення:</h4>
+              <ol>
+                <li>Обсяг продажу на РДН в порівнянні з попередньою добою знизився на 17 464,3МВт*год; </li>
+                <li>Обсяг закупки підвищився в порівнянні з попередньою добою на 2 157,6МВт*год; </li>
+                <li>Ринок переважно профіцитний; </li>
+                <li>Ціна висока за рахунок підвищення об‘єму закупки і зниження об‘єму продажу</li>
+              </ol>
+            </div>
+            <div class="tabs__item js-tab-item">щось про газодобу</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <footer class="footer">
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="footer__logo cell large-3">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTgiIGhlaWdodD0iNjQuNzY5IiB2aWV3Qm94PSIwIDAgMTE4IDY0Ljc2OSI+CiAgPGcgaWQ9ImxvZ29fc2hhZG93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzg0IC0zNjAxLjYxNSkiPgogICAgPHBhdGggaWQ9IlBhdGhfMTQ5IiBkYXRhLW5hbWU9IlBhdGggMTQ5IiBkPSJNNTIuNiwyNy4xNDJBMzYuOTk0LDM2Ljk5NCwwLDAsMCw0Ny4zNTksMjguNmwtMTIuNiwxOC45NDFhMTIuMTQxLDEyLjE0MSwwLDAsMCw0LjcyMSw4LjYzNmMzLjIxNCwyLjQ1MSw3LjQsMy4zMzQsMTIuNDMyLDIuNjIzYTIyLjgzMiwyMi44MzIsMCwwLDAsOC42MjQtMy4wMjEsMTkuOTQyLDE5Ljk0MiwwLDAsMCw2LjQtNi4wNjksMTcuNTM2LDE3LjUzNiwwLDAsMCwzLjA1MS05Ljc2NWMwLTQuNTI5LTEuNjMtOC4wMTMtNC44NDEtMTAuMzU2UzU3LjcyMiwyNi40MTcsNTIuNiwyNy4xNDJabTYuMzMzLDIwLjk2NWExMS4xMjIsMTEuMTIyLDAsMCwxLTYuOSwzLjU2NCw4LjIzMyw4LjIzMywwLDAsMS02LjUzOS0xLjQ0NCw2LjksNi45LDAsMCwxLTIuNi01LjgsOS4yMjcsOS4yMjcsMCwwLDEsMi43OTUtNi42NjksMTEuODMyLDExLjgzMiwwLDAsMSw3LjA2NC0zLjUwNmMyLjgxNS0uNCw0Ljk2OCwwLDYuNTczLDEuMjI1YTYuNTYyLDYuNTYyLDAsMCwxLDIuNCw1LjYsOS44NjcsOS44NjcsMCwwLDEtMi44LDcuMDI4Wk04Ni4wOTIsMjIuMjgxLDc3LjQyNCwyMy41Miw3MS4wODUsNTUuN2wxNy43MDgtMi41MzEsMS42OC03LjQtOS4yMjgsMS4yWm03LjA1Mi0xLjAwN0w5MS40MTgsMjguODksOTkuMzkyLDI3LjdsLTUuNjMsMjQuODU0LDguNzA2LTEuMjc3LDUuNTA2LTI0Ljc5MiwzLjU1OC0uNSw1LjQ2OC04LjJabS03MC44LDE2LjAzMkwxOC42NTcsMTkuMTk1LDAsNDYuMTYzbDEyLTcuMjgsNS4xMzgsMjQuODg2TDU5LjcxNCwwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzg1IDM2MDIuNjE1KSIgZmlsbD0iIzMwMzAzMCIvPgogICAgPHBhdGggaWQ9IlBhdGhfMTUwIiBkYXRhLW5hbWU9IlBhdGggMTUwIiBkPSJNNTIuNiwyNy4xNDJBMzYuOTk0LDM2Ljk5NCwwLDAsMCw0Ny4zNTksMjguNmwtMTIuNiwxOC45NDFhMTIuMTQxLDEyLjE0MSwwLDAsMCw0LjcyMSw4LjYzNmMzLjIxNCwyLjQ1MSw3LjQsMy4zMzQsMTIuNDMyLDIuNjIzYTIyLjgzMiwyMi44MzIsMCwwLDAsOC42MjQtMy4wMjEsMTkuOTQyLDE5Ljk0MiwwLDAsMCw2LjQtNi4wNjksMTcuNTM2LDE3LjUzNiwwLDAsMCwzLjA1MS05Ljc2NWMwLTQuNTI5LTEuNjMtOC4wMTMtNC44NDEtMTAuMzU2UzU3LjcyMiwyNi40MTcsNTIuNiwyNy4xNDJabTYuMzMzLDIwLjk2NWExMS4xMjIsMTEuMTIyLDAsMCwxLTYuOSwzLjU2NCw4LjIzMyw4LjIzMywwLDAsMS02LjUzOS0xLjQ0NCw2LjksNi45LDAsMCwxLTIuNi01LjgsOS4yMjcsOS4yMjcsMCwwLDEsMi43OTUtNi42NjksMTEuODMyLDExLjgzMiwwLDAsMSw3LjA2NC0zLjUwNmMyLjgxNS0uNCw0Ljk2OCwwLDYuNTczLDEuMjI1YTYuNTYyLDYuNTYyLDAsMCwxLDIuNCw1LjYsOS44NjcsOS44NjcsMCwwLDEtMi44LDcuMDI4Wk04Ni4wOTIsMjIuMjgxLDc3LjQyNCwyMy41Miw3MS4wODUsNTUuN2wxNy43MDgtMi41MzEsMS42OC03LjQtOS4yMjgsMS4yWm03LjA1Mi0xLjAwN0w5MS40MTgsMjguODksOTkuMzkyLDI3LjdsLTUuNjMsMjQuODU0LDguNzA2LTEuMjc3LDUuNTA2LTI0Ljc5MiwzLjU1OC0uNSw1LjQ2OC04LjJabS03MC44LDE2LjAzMkwxOC42NTcsMTkuMTk1LDAsNDYuMTYzbDEyLTcuMjgsNS4xMzgsMjQuODg2TDU5LjcxNCwwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzg0IDM2MDEuNjE1KSIgZmlsbD0iI2ZmZDcwMSIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-3">
+        <span class="logo-subline">учасник енергетичної, газової та вугільної галузі.</span>
+      </div>
+      <div class="cell large-offset-1 large-8 footer__menus">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Головна сторінка
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Послуги
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              FAQ
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Контакти
+            </a>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item">
+            <span class="menu__text">
+              Важливо
+            </span>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              FAQs
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Документація
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Документація
+            </a>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item">
+            <span class="menu__text">
+              Соцільні мержі
+            </span>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Telegram
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Linkedin
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright copyright cell small-12">
+        <div class="copyright__contacts">
+          <a href="#">Політика конфіденційності</a>
+          <a href="mailto:office@volts.energy">office@volts.energy</a>
+          <a href="tel:+380444904558">+38(044) 490 45 58</a>
+        </div>
+        <span>© 2003-2022</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- <svg class="cursor" width="25" height="25" viewBox="0 0 25 25">
+      <circle class="cursor__inner" cx="12.5" cy="12.5" r="6.25" />
+    </svg> -->
+  </body>
+</html>
