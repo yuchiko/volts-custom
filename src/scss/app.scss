@@ -26,9 +26,10 @@
 @import "buttons";
 
 /* components */
-@import "components/burger-menu.scss";
-@import "components/lang-dropdown.scss";
-@import "components/socials.scss";
+@import "components/burger-menu";
+@import "components/lang-dropdown";
+@import "components/socials";
+@import "components/tabs";
 
 /* block components */
 @import "blocks/header";
@@ -39,4 +40,6 @@
 @import "blocks/services";
 @import "blocks/person";
 @import "blocks/main-form";
+@import "blocks/news";
+@import "blocks/footer";
 

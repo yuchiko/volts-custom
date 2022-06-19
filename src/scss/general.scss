@@ -61,6 +61,10 @@ button:focus-visible {
     margin-bottom: 7rem;
   }
 
+  &--invert-bg {
+    background: $white;
+  }
+
   &--invert &__heading {
     color: #303030;
   }

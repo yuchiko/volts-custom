@@ -1,0 +1,72 @@
+.footer {
+  padding: 6rem 0 3rem 0;
+
+
+  &__copyright {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-bottom: 3rem;
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__menus {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .menu {
+    list-style: none;
+    margin: 0;
+
+    &__item {
+      margin-bottom: 1.2rem;
+    }
+
+    &__link {
+      color: white;
+      font-size: 1.4rem;
+      font-weight: $fw-medium;
+      @include transition(all);
+
+      &:hover {
+        color: var(--theme-accent-color);
+      }
+    }
+
+    &__text {
+      color: $white;
+      opacity: 0.6;
+      font-size: 1.4rem;
+      font-weight: $fw-medium;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 10rem;
+
+  &__contacts {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: $fw-medium;
+
+    a {
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}
